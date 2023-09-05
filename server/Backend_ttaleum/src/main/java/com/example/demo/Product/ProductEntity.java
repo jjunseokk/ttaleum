@@ -200,5 +200,25 @@ public class ProductEntity {
 		productEntity.setProduct_status(productDTO.getProduct_status());
 		return productEntity;
 	}
-
+	
+	// 수정 구현
+	public static ProductEntity toUpdateEntity(ProductDTO productDTO) {
+		ProductEntity productEntity = new ProductEntity();
+		productEntity.setProduct_id(productDTO.getProduct_id());
+		productEntity.setProduct_name(productDTO.getProduct_name());
+		productEntity.setProduct_detail(productDTO.getProduct_detail());
+		productEntity.setProduct_image(productDTO.getProduct_image());
+		productEntity.setProduct_country(productDTO.getProduct_country());
+		productEntity.setProduct_type(productDTO.getProduct_type());
+		productEntity.setProduct_color(productDTO.getProduct_color());
+		productEntity.setProduct_cost(productDTO.getProduct_cost());
+		productEntity.setProduct_body(productDTO.getProduct_body());
+		productEntity.setProduct_acidity(productDTO.getProduct_acidity());
+		productEntity.setProduct_acidity(productDTO.getProduct_acidity());
+		productEntity.setProduct_tannin(productDTO.getProduct_tannin());
+		productEntity.setProduct_alcohol(productDTO.getProduct_alcohol());
+		productEntity.setProduct_stock(productDTO.getProduct_stock());
+		productEntity.setProduct_status(productDTO.getProduct_status());
+		return productEntity;
+	}
 }
