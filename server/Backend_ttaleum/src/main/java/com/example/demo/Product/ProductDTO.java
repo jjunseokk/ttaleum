@@ -1,5 +1,16 @@
 package com.example.demo.Product;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter // getter, setter 생략
+@ToString
+@NoArgsConstructor // 기본생성자
+@AllArgsConstructor // 모든 필드를 매개변수로 하는 생성자
 public class ProductDTO {
 	private Long product_id;
 	private String product_name;
@@ -14,7 +25,8 @@ public class ProductDTO {
 	private String product_tannin;
 	private String product_alcohol;
 	private int product_stock;
-	private String status;
+	private String product_status;
+	
 	public Long getProduct_id() {
 		return product_id;
 	}
@@ -93,12 +105,13 @@ public class ProductDTO {
 	public void setProduct_stock(int product_stock) {
 		this.product_stock = product_stock;
 	}
-	public String getStatus() {
-		return status;
+	public String getProduct_status() {
+		return product_status;
 	}
-	public void setStatus(String status) {
-		this.status = status;
+	public void setProduct_status(String product_status) {
+		this.product_status = product_status;
 	}
+	
 	@Override
 	public String toString() {
 		return "ProductDTO [product_id=" + product_id + ", product_name=" + product_name + ", product_detail="
@@ -106,8 +119,25 @@ public class ProductDTO {
 				+ ", product_type=" + product_type + ", product_color=" + product_color + ", product_cost="
 				+ product_cost + ", product_body=" + product_body + ", product_acidity=" + product_acidity
 				+ ", product_tannin=" + product_tannin + ", product_alcohol=" + product_alcohol + ", product_stock="
-				+ product_stock + ", status=" + status + "]";
+				+ product_stock + ", product_status=" + product_status + "]";
 	}
-	
-	
+	// 전체 조회
+	public static ProductDTO toProductDTO(ProductEntity productEntity) {
+		ProductDTO productDTO = new ProductDTO();
+		productDTO.setProduct_id(productEntity.getProduct_id());
+		productDTO.setProduct_name(productEntity.getProduct_name());
+		productDTO.setProduct_detail(productEntity.getProduct_detail());
+		productDTO.setProduct_image(productEntity.getProduct_image());
+		productDTO.setProduct_country(productEntity.getProduct_country());
+		productDTO.setProduct_type(productEntity.getProduct_type());
+		productDTO.setProduct_color(productEntity.getProduct_color());
+		productDTO.setProduct_cost(productEntity.getProduct_cost());
+		productDTO.setProduct_body(productEntity.getProduct_body());
+		productDTO.setProduct_acidity(productEntity.getProduct_acidity());
+		productDTO.setProduct_tannin(productEntity.getProduct_tannin());
+		productDTO.setProduct_alcohol(productEntity.getProduct_alcohol());
+		productDTO.setProduct_stock(productEntity.getProduct_stock());
+		productDTO.setProduct_status(productEntity.getProduct_status());
+		return productDTO;
+	}
 }

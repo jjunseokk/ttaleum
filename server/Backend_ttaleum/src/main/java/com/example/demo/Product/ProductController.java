@@ -1,5 +1,7 @@
 package com.example.demo.Product;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,14 +19,15 @@ public class ProductController {
 
 	// 삽입 구현
 	@PostMapping("/insertProduct")
-	public void insertProduct(@RequestBody ProductDTO productDTO) {
+	public void saveProduct(@RequestBody ProductDTO productDTO) {
 		System.out.println("insert 성공");
-		productService.insert(productDTO);
-	}
-	
-	@GetMapping("test")
-	public void test() {
-		System.out.println("프로덕트 테스트");
+		productService.save(productDTO);
 	}
 
+	// 조회 구현
+	@GetMapping("select")
+	public void findAll() {
+		List<ProductDTO> productDTOList = productService.findAll();
+		System.out.println("ProductDTOList=" + productDTOList);
+	}
 }

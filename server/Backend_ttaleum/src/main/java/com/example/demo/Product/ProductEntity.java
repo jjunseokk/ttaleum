@@ -6,7 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "product")
 public class ProductEntity {
@@ -178,22 +182,22 @@ public class ProductEntity {
 	}
 
 	//삽입 구현
-	public static ProductEntity toInsertEntity(ProductDTO productDTO) {
+	public static ProductEntity toSaveEntity(ProductDTO productDTO) {
 		ProductEntity productEntity = new ProductEntity();
 		productEntity.setProduct_id(productDTO.getProduct_id());
-		productEntity.setProduct_name(productEntity.getProduct_name());
-		productEntity.setProduct_detail(productEntity.getProduct_detail());
-		productEntity.setProduct_image(productEntity.getProduct_image());
-		productEntity.setProduct_country(productEntity.getProduct_country());
-		productEntity.setProduct_type(productEntity.product_type);
-		productEntity.setProduct_color(productEntity.getProduct_color());
-		productEntity.setProduct_cost(productEntity.getProduct_cost());
-		productEntity.setProduct_body(productEntity.getProduct_body());
-		productEntity.setProduct_acidity(productEntity.getProduct_acidity());
-		productEntity.setProduct_tannin(productEntity.getProduct_tannin());
-		productEntity.setProduct_alcohol(productEntity.getProduct_alcohol());
-		productEntity.setProduct_stock(productEntity.getProduct_stock());
-		productEntity.setProduct_status(productEntity.getProduct_status());
+		productEntity.setProduct_name(productDTO.getProduct_name());
+		productEntity.setProduct_detail(productDTO.getProduct_detail());
+		productEntity.setProduct_image(productDTO.getProduct_image());
+		productEntity.setProduct_country(productDTO.getProduct_country());
+		productEntity.setProduct_type(productDTO.getProduct_type());
+		productEntity.setProduct_color(productDTO.getProduct_color());
+		productEntity.setProduct_cost(productDTO.getProduct_cost());
+		productEntity.setProduct_body(productDTO.getProduct_body());
+		productEntity.setProduct_acidity(productDTO.getProduct_acidity());
+		productEntity.setProduct_tannin(productDTO.getProduct_tannin());
+		productEntity.setProduct_alcohol(productDTO.getProduct_alcohol());
+		productEntity.setProduct_stock(productDTO.getProduct_stock());
+		productEntity.setProduct_status(productDTO.getProduct_status());
 		return productEntity;
 	}
 
