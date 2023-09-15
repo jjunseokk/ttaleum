@@ -1,4 +1,4 @@
-package com.example.demo.Product;
+package com.example.ttaleum.Product;
 
 import java.util.List;
 

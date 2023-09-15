@@ -1,4 +1,4 @@
-package com.example.demo.Product;
+package com.example.ttaleum.Product;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

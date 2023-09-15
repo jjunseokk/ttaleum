@@ -1,4 +1,4 @@
-package com.example.demo.Product;
+package com.example.ttaleum.Product;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

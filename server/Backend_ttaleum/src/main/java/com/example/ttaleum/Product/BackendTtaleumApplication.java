@@ -1,4 +1,4 @@
-package com.example.demo.Product;
+package com.example.ttaleum.Product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
