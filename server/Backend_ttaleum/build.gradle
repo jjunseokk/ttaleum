@@ -33,3 +33,6 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+springBoot {
+    mainClassName = 'com.example.ttaleum.BackendTtaleumApplication'
+}
