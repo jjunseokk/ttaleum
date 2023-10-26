@@ -1,0 +1,44 @@
+$color-gray: #999999;
+$font-small: 10px;
+$font-medium: 14px;
+$font-bold: 600;
+$line-height: 18px;
+
+.name_font {
+  font-weight: $font-bold;
+  font-size: $font-medium;
+  line-height: $line-height;
+}
+
+.type_font {
+  font-size: $font-small;
+  color: $color-gray;
+  line-height: $line-height;
+}
+
+.volume_font {
+  font-weight: $font-bold;
+  font-size: $font-small;
+  line-height: $line-height;
+}
+
+.price_font {
+  font-weight: $font-bold;
+  font-size: $font-small;
+  line-height: $line-height;
+}
+
+.unit_font {
+  font-size: $font-small;
+  color: $color-gray;
+  line-height: $line-height;
+}
+
+.score_font {
+  font-weight: $font-bold;
+  font-size: $font-small;
+  color: $color-gray;
+  line-height: $line-height;
+  display: flex;
+  align-items: center;
+}
