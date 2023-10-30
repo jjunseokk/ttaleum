@@ -1,3 +1,4 @@
+import Header from "@/components/Header/Header";
 import "./globals.scss";
 import { Inter } from "next/font/google";
 
