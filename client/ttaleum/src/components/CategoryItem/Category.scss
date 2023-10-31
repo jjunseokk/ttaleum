@@ -2,17 +2,28 @@ $color-black: #1d1d1d;
 $font-large: 24px;
 $font-bold: 700;
 $font-medium: 14px;
+$font-small: 10px;
 $line-height: 32px;
 
 .category-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px 0px 10px;
+
     .category-box {
         width: 61px;
         height: 61px;
-        margin: 20px 0px 0px 20px;
         background: black;
         border-radius: 20px;
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    p {
+        text-align: center;
+        font-size: $font-small;
     }
 }

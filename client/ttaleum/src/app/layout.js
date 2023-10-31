@@ -18,7 +18,7 @@ const myFont = localFont({
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="kr" className={myFont.className}>
+    <html lang="kr" className={myFont.className} >
       <body>{children}</body>
     </html>
   );
