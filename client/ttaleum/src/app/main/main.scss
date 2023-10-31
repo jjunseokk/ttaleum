@@ -8,8 +8,9 @@ $line-height: 32px;
     width: 393px;
     height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    
     .main-banner{
-        width: 100%;
+        width: 393px;
         height: 311px;
         padding: 25px;
         background: url(../../../public/bannerBg.svg);
@@ -34,6 +35,15 @@ $line-height: 32px;
             position: absolute;
             bottom: 0;
             right: 0;
+        }
+    }
+    .main-category{
+        display: flex;
+        -ms-overflow-style: none;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar{
+            display: none;
         }
     }
 }

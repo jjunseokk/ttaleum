@@ -11,9 +11,9 @@ export default function Header() {
         <div className="header-container">
             <Image src={Logo} alt="Logo" />
             <div className="header-menu">
-                <Image src={search} />
-                <Image src={heart} />
-                <Image src={cart} />
+                <Image src={search} alt='search'/>
+                <Image src={heart} alt='heart' />
+                <Image src={cart} alt='cart' />
             </div>
         </div>
     )

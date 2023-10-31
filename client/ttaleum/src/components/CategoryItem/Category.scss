@@ -1,0 +1,18 @@
+$color-black: #1d1d1d;
+$font-large: 24px;
+$font-bold: 700;
+$font-medium: 14px;
+$line-height: 32px;
+
+.category-container {
+    .category-box {
+        width: 61px;
+        height: 61px;
+        margin: 20px 0px 0px 20px;
+        background: black;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
