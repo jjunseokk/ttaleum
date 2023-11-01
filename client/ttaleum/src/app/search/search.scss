@@ -1,0 +1,75 @@
+@import '../globals.scss';
+
+$margin : 24px;
+$font-large : 20px;
+$font-bold : 700;
+$font-medium : 14px;
+
+
+.main-container {
+    .search-container {
+        margin-left: $margin;
+
+        .search-searchBar {
+            width: 344px;
+            height: 41px;
+            border-radius: 20px;
+            background: #e3e3e3;
+            margin: $margin 0px;
+            padding: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            input {
+                width: 280px;
+                height: 25px;
+                background: none;
+                border: none;
+                outline: none;
+                font-size: $font-medium;
+            }
+
+            img {
+                margin-right: 10px;
+            }
+        }
+
+        .search-recent,
+        .search-popular {
+
+            .search-recent-title,
+            .search-popular-title {
+                font-size: $font-large;
+                font-weight: $font-bold;
+                margin: 26px 0px;
+            }
+
+            .search-recent-item {
+                font-size: $font-medium;
+                text-align: center;
+                color: #a6a6a6;
+                margin-top: 26px;
+            }
+        }
+
+        .search-popular {
+            .search-popular-item {
+                display: flex;
+                margin-bottom: $margin;
+
+                .number,
+                .text {
+                    font-size: $font-medium;
+                }
+
+                .number {
+                    font-weight: $font-bold;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+
+}

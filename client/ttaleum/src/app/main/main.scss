@@ -1,16 +1,18 @@
+@import '../globals.scss';
+
 $color-black: #1d1d1d;
 $font-large: 24px;
 $font-bold: 700;
 $font-medium: 14px;
 $font-small: 12px;
 $line-height: 32px;
-$margin: 20px;
+$margin: 24px;
 
 .main-container {
     width: 393px;
     min-height: 100vh;
     overflow: auto;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     margin-bottom: 59px;
 
     .main-banner {
@@ -50,6 +52,7 @@ $margin: 20px;
 
     .main-category {
         display: flex;
+        height: 108px;
         margin-left: $margin;
         -ms-overflow-style: none;
         overflow-y: auto;
@@ -67,6 +70,7 @@ $margin: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 33px;
 
             .bestSeller-title {
                 align-items: center;
@@ -132,7 +136,7 @@ $margin: 20px;
 
     .main-event {
         margin-left: $margin;
-        margin-top: 25px;
+        margin-top: 44px;
 
         .event_1,
         .event_2 {
@@ -152,7 +156,8 @@ $margin: 20px;
 
         .event_2 {
             color: white;
-            margin-top: 10px;
+            margin-top: 24px;
+            margin-bottom: 24px;
         }
     }
 }
