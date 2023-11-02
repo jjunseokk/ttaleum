@@ -1,12 +1,18 @@
+
 import './search.scss'
 
 import Header from "@/components/Header/Header";
-import Navigation from "@/components/Navigation/Navigation";
 import Image from 'next/image';
 
-import search from '../../../public/search.svg'
+import search from '../../../public/search.svg';
+import close from '../../../public/close.svg';
 
 export default function Search() {
+
+    const searchItem = [
+        "레드 와인", "화이트 와인", "안주","안주","안주","안주",
+    ];
+
     return (
         <div className="main">
             <div className="main-container">
@@ -20,9 +26,17 @@ export default function Search() {
                         <p className='search-recent-title'>
                             최근 검색어
                         </p>
-                        <div className='search-recent-item'>
-                            <p>최근 검색어가 없습니다.</p>
-                        </div>
+                        {Array.isArray(searchItem) && searchItem.length === 0 ? (
+                            <div className='search-recent-item'>
+                                <p>최근 검색어가 없습니다.</p>
+                            </div>
+                        ) : (
+                            searchItem?.map((item, idx) => (
+                                <div className='item' key={idx}>
+                                    <span>{item}</span> <Image src={close} alt='close' />
+                                </div>
+                            ))
+                        )}
                     </div>
                     <div className='search-popular'>
                         <p className='search-popular-title'>
@@ -38,7 +52,6 @@ export default function Search() {
                         </div>
                     </div>
                 </div>
-                <Navigation />
             </div>
         </div>
     )

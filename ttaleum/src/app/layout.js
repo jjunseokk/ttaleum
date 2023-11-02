@@ -1,3 +1,4 @@
+import Navigation from "@/components/Navigation/Navigation";
 import "./globals.scss";
 import { Inter } from "next/font/google";
 
@@ -18,7 +19,10 @@ const myFont = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="kr" className={myFont.className} >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Navigation />
+      </body>
     </html>
   );
 }
