@@ -4,9 +4,12 @@
   margin: 0;
 }
 
+html{
+  width: 393px;
+  margin: 0 auto;
+}
+
 .main {
-  width: 45%;
-  border: 1px solid black;
   margin: 0 auto;
   display: flex;
   justify-content: center;

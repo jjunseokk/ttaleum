@@ -6,6 +6,10 @@ $margin : 20px;
     display: flex;
     justify-content: space-between;
 
+    >img {
+        cursor: pointer;
+    }
+
     >p {
         font-size: $font-medium;
         margin-left: $margin;
