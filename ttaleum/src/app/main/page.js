@@ -24,19 +24,21 @@ import event_2 from '../../../public/event_2.svg'
 
 export default function Main() {
     const testCategory = [
-        { "img": RED, "name": "레드 와인" },
-        { "img": WHITE, "name": "화이트 와인" },
-        { "img": ROSE, "name": "로제 와인" },
-        { "img": SPARKLING, "name": "스파클링 와인" },
-        { "img": DESSERT, "name": "디저트 와인" },
-        { "img": NON_ALCOHOLIC, "name": "논알코올" },
-        { "img": SNACK, "name": "안주" },
+        { "img": RED, "name": "레드 와인", id: 2 },
+        { "img": WHITE, "name": "화이트 와인", id: 3 },
+        { "img": ROSE, "name": "로제 와인", id: 4 },
+        { "img": SPARKLING, "name": "스파클링 와인", id: 5 },
+        { "img": DESSERT, "name": "디저트 와인", id: 6 },
+        { "img": NON_ALCOHOLIC, "name": "논알코올", id: 7 },
+        { "img": SNACK, "name": "안주", id: 8 },
     ]
+
     const testCollection = [
         { "img": collection_1, "text": `이 가격에 와인을? 가성비 좋은 와인 모음집` },
         { "img": collection_2, "text": `이번 주말에는 홈파티다! 홈파티용 추천 와인 5가지` },
         { "img": collection_3, "text": `어떤 와인을 선물하면 좋을까? 따름이 추천하는 선물용 와인` }
     ]
+
     const categoryScrollRef = useRef(null);
     const bestSellerScrollRef = useRef(null);
     const collectionScrollRef = useRef(null);
@@ -134,7 +136,7 @@ export default function Main() {
                 {Array.isArray(testCategory) ?
                     testCategory.map((item, idx) => {
                         return (
-                            <Category key={idx} img={item.img} title={item.name} />
+                            <Category id={item.id} key={idx} img={item.img} title={item.name} />
                         )
                     }) : null}
             </div>

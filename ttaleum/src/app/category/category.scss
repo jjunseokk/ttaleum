@@ -1,0 +1,38 @@
+@import '../globals.scss';
+
+$margin : 24px;
+$font-medium: 14px;
+$font-bold: 700;
+
+.category-container {
+    margin-left: $margin;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .category-itemBox {
+        width: 166px;
+        height: 117px;
+        margin-top: $margin;
+        margin-right: 13px;
+        border-radius: 30px;
+        padding: 20px;
+
+        position: relative;
+        cursor: pointer;
+
+        p {
+            font-weight: $font-bold;
+            font-size: $font-medium;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    }
+}
