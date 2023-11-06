@@ -1,3 +1,4 @@
+import MainSide from "@/components/MainSide/MainSide";
 import Navigation from "../components/Navigation/Navigation";
 import "./globals.scss";
 import { Inter } from "next/font/google";
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
     <html lang="kr" className={myFont.className} >
       <body>
         {children}
+        <MainSide />
         <Navigation />
       </body>
     </html>

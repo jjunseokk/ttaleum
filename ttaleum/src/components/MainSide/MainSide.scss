@@ -1,9 +1,29 @@
-.mainSide-container{
-    width: 393px;
-    height: 100vh;
-    border: 1px solid red;
+$font-bold: 700;
+$font-medium: 16px;
 
-    .mainSide-logo{
+.mainSide-container {
+    width: 393px;
+    padding: 0px 90px;
+    position: fixed;
+    top: 50%;
+    left: 65%;
+    transform: translate(0, -50%);
+    
+
+    .mainSide-logo {
         margin: 20px 0px 0px 10px;
-    }    
+    }
+
+    >P {
+        font-size: $font-medium;
+        margin-left: 15px;
+        margin-top: 20px;
+
+        >span {
+            font-weight: $font-bold;
+        }
+    }
+    .mainSide-mascot{
+        margin-top: 40px;
+    }
 }
