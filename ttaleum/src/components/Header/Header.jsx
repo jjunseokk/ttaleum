@@ -13,12 +13,54 @@ import back from '../../../public/backBtn.svg';
 
 export default function Header({ title }) {
     const router = useRouter();
+    var titleName; // titleName 변수를 선언합니다.
+
+    switch (title) {
+        case "1":
+            titleName = "전체보기";
+            break; // 각 case 끝에 break를 추가합니다.
+        case "2":
+            titleName = "레드 와인";
+            break;
+        case "3":
+            titleName = "화이트 와인";
+            break;
+        case "4":
+            titleName = "로제 와인";
+            break;
+        case "5":
+            titleName = "스파클링 와인";
+            break;
+        case "6":
+            titleName = "디저트 와인";
+            break;
+        case "7":
+            titleName = "논알코올";
+            break;
+        case "8":
+            titleName = "안주";
+            break;
+        case "상세보기":
+            titleName = "상세보기"
+            break;
+        default:
+            titleName = "기본값"; // 필요에 따라 기본값을 처리할 수 있습니다.
+    }
 
     return (
         <>
-            {title ? (
+            {title ? titleName === "상세보기" ? (
                 <div className="header-container">
-                    <p>{title}</p>
+                    <Image onClick={() => { window.history.back() }} src={back} alt='back' />
+                    <p>{titleName}</p>
+                    <div className="header-menu">
+                        <Image src={heart} alt='heart' />
+                        <Image src={cart} alt='cart' />
+                    </div>
+                </div>
+            ) : (
+                <div className="header-container">
+                    <p>{titleName}</p>
                     <div className="header-menu">
                         <Image src={heart} alt='heart' />
                         <Image src={cart} alt='cart' />

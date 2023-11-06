@@ -1,0 +1,28 @@
+@import '../../globals.scss';
+
+$margin : 24px;
+$font-bold : 700;
+$font-large : 24px;
+$font-medium : 14px;
+$font-color : #999999;
+
+.detail {
+    margin-bottom: $margin;
+}
+
+.detail-container {
+    margin-left: $margin;
+
+    .detail-title {
+        font-size: $font-large;
+        margin-bottom: $margin;
+
+        >span {
+            font-weight: $font-bold;
+        }
+    }
+    .detail-text{
+        font-size: $font-medium;
+        color: $font-color;
+    }
+}

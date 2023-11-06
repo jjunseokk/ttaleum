@@ -52,10 +52,9 @@ $margin: 24px;
 
     .main-category {
         display: flex;
-        height: 108px;
+        flex-wrap: wrap;
+        height: 200px;
         margin-left: $margin;
-        -ms-overflow-style: none;
-        overflow-y: auto;
 
         &::-webkit-scrollbar {
             display: none;
