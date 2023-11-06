@@ -39,21 +39,13 @@ export default function Main() {
         { "img": collection_3, "text": `어떤 와인을 선물하면 좋을까? 따름이 추천하는 선물용 와인` }
     ]
 
-    const categoryScrollRef = useRef(null);
     const bestSellerScrollRef = useRef(null);
     const collectionScrollRef = useRef(null);
-    const [categoryIsDrag, setCategoryIsDrag] = useState(false); //드래그 중인지의 상태확인
     const [bestSellerIsDrag, setBestSellerIsDrag] = useState(false); //드래그 중인지의 상태확인
     const [collectionIsDrag, setCollectionIsDrag] = useState(false); //드래그 중인지의 상태확인
-    const [categoryStartX, setCategoryStartX] = useState(); //처음 클릭한 좌표
     const [bestSellerStartX, setBestSellerStartX] = useState(); //처음 클릭한 좌표
     const [collectionStartX, setCollectionStartX] = useState(); //처음 클릭한 좌표
 
-    const onCategoryDragStart = (e) => {
-        e.preventDefault();
-        setCategoryIsDrag(true);
-        setCategoryStartX(e.pageX + categoryScrollRef.current.scrollLeft);
-    }
 
     const onBestSellerDragStart = (e) => {
         e.preventDefault();
@@ -67,10 +59,6 @@ export default function Main() {
         setCollectionStartX(e.pageX + collectionScrollRef.current.scrollLeft);
     }
 
-    const onCategoryDragEnd = () => {
-        setCategoryIsDrag(false);
-    }
-
     const onBestSellerDragEnd = () => {
         setBestSellerIsDrag(false);
     }
@@ -80,10 +68,6 @@ export default function Main() {
     }
 
     const onDragMove = (e) => {
-        if (categoryIsDrag) {
-            categoryScrollRef.current.scrollLeft = categoryStartX - e.pageX;
-        }
-
         if (bestSellerIsDrag) {
             bestSellerScrollRef.current.scrollLeft = bestSellerStartX - e.pageX;
         }
@@ -125,14 +109,7 @@ export default function Main() {
                 </div>
                 <Image className="banner-character" src={bannerCh} alt="bannerCh" />
             </div>
-            <div
-                className="main-category"
-                onMouseDown={onCategoryDragStart}
-                onMouseMove={categoryIsDrag ? onThrottleDragMove : null}
-                onMouseUp={onCategoryDragEnd}
-                onMouseLeave={onCategoryDragEnd}
-                ref={categoryScrollRef}
-            >
+            <div className="main-category">
                 {Array.isArray(testCategory) ?
                     testCategory.map((item, idx) => {
                         return (
