@@ -1,0 +1,34 @@
+@import "../globals.scss";
+
+$margin: 24px;
+$font-medium: 14px;
+
+.item-assistant {
+  margin-left: $margin;
+  margin-right: $margin;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  .item-number {
+    font-size: $font-medium;
+    color: #999999;
+    margin-bottom: $margin;
+  }
+
+  .item-sort {
+    font-size: $font-medium;
+    color: #ff6135;
+  }
+}
+
+.item-container {
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item-box-margin {
+  margin-bottom: $margin;
+}
