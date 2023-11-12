@@ -96,9 +96,6 @@ $margin: 24px;
 
         .bestSeller-item {
             margin-top: 20px;
-            display: flex;
-            -ms-overflow-style: none;
-            overflow-y: auto;
 
             &::-webkit-scrollbar {
                 display: none;
