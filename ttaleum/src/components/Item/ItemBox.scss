@@ -36,8 +36,13 @@ $line-height: 18px;
     .itemBox-heart {
         margin-left: 20px;
     }
-  }
 
+    .itemBox-cart {
+      position: absolute;
+      top: 122px;
+      right: 13px;
+    }
+  }
 }
 
 .name_font {
