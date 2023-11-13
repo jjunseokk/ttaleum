@@ -19,27 +19,33 @@ import ItemBox from "@/components/Item/ItemBox";
 import collection_1 from '../../../public/collection_1.svg'
 import collection_2 from '../../../public/collection_2.svg'
 import collection_3 from '../../../public/collection_3.svg'
+import collection_4 from '../../../public/collection_4.svg'
 import CollectionBox from "@/components/CollectionBox/CollectionBox";
 import event_1 from '../../../public/event_1.svg'
 import event_2 from '../../../public/event_2.svg'
+import { useRouter } from "next/navigation";
+
+
+const testCategory = [
+    { "img": RED, "name": "레드 와인", id: 2 },
+    { "img": WHITE, "name": "화이트 와인", id: 3 },
+    { "img": ROSE, "name": "로제 와인", id: 4 },
+    { "img": SPARKLING, "name": "스파클링 와인", id: 5 },
+    { "img": DESSERT, "name": "디저트 와인", id: 6 },
+    { "img": NON_ALCOHOLIC, "name": "논알코올", id: 7 },
+    { "img": SNACK, "name": "안주", id: 8 },
+    { "img": all, "name": "전체보기", id: 1 },
+]
+
+const testCollection = [
+    { "img": collection_1, "text": `이 가격에 와인을? \n가성비 좋은 와인 모음집` },
+    { "img": collection_2, "text": `이번 주말에는 홈파티다! \n홈파티용 추천 와인 5가지` },
+    { "img": collection_3, "text": `특별한 날엔 와인 선물을! \n따름이 추천하는 선물용 와인` },
+    { "img": collection_4, "text": `날씨 좋은 날 피그닉 어때요? \n피크닉 모음집!` }
+]
 
 export default function Main() {
-    const testCategory = [
-        { "img": RED, "name": "레드 와인", id: 2 },
-        { "img": WHITE, "name": "화이트 와인", id: 3 },
-        { "img": ROSE, "name": "로제 와인", id: 4 },
-        { "img": SPARKLING, "name": "스파클링 와인", id: 5 },
-        { "img": DESSERT, "name": "디저트 와인", id: 6 },
-        { "img": NON_ALCOHOLIC, "name": "논알코올", id: 7 },
-        { "img": SNACK, "name": "안주", id: 8 },
-        { "img": all, "name": "전체보기", id: 1 },
-    ]
-
-    const testCollection = [
-        { "img": collection_1, "text": `이 가격에 와인을? 가성비 좋은 와인 모음집` },
-        { "img": collection_2, "text": `이번 주말에는 홈파티다! 홈파티용 추천 와인 5가지` },
-        { "img": collection_3, "text": `어떤 와인을 선물하면 좋을까? 따름이 추천하는 선물용 와인` }
-    ]
+    const router = useRouter();
 
     return (
         <div className="main-container">
@@ -73,7 +79,7 @@ export default function Main() {
                             <span>이번주</span> 가장 많이 팔렸어요
                         </p>
                     </div>
-                    <p className="bestSeller-more">전체보기</p>
+                    <p className="bestSeller-more" onClick={() => { router.push(`/products/1`) }} >전체보기</p>
                 </div>
                 <div className="bestSeller-item">
                     <ItemBox page="main" number={1} />
@@ -95,6 +101,7 @@ export default function Main() {
                 </div>
             </div>
             <div className="main-event">
+                <p>따름 PICK! 특별기획전</p>
                 <div className="event_1">
                     <Image src={event_1} alt="" />
                     <p>

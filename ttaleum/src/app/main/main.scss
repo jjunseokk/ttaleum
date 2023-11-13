@@ -1,7 +1,7 @@
 @import '../globals.scss';
 
 $color-black: #1d1d1d;
-$font-large: 24px;
+$font-large: 20px;
 $font-bold: 700;
 $font-medium: 14px;
 $font-small: 12px;
@@ -91,6 +91,7 @@ $margin: 24px;
             .bestSeller-more {
                 font-size: $font-small;
                 margin-right: 25px;
+                cursor: pointer;
             }
         }
 
@@ -117,8 +118,9 @@ $margin: 24px;
         .collection-item {
             margin-top: 25px;
             display: flex;
-            -ms-overflow-style: none;
-            overflow-y: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
 
             &::-webkit-scrollbar {
                 display: none;
@@ -132,8 +134,11 @@ $margin: 24px;
 
     .main-event {
         margin-left: $margin;
-        margin-top: 44px;
-
+        margin-top: 9px;
+        >p{
+            font-size: $font-large;
+            margin-bottom: 33px;
+        }
         .event_1,
         .event_2 {
             position: relative;
